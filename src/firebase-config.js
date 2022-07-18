@@ -13,8 +13,25 @@ const config = {
 export function getFirebaseConfig() {
   if (!config || !config.apiKey) {
     throw new Error('No Firebase configuration object provided.' + '\n' +
-    'Add your web app\'s configuration object to firebase-config.js');
+      'Add your web app\'s configuration object to firebase-config.js');
   } else {
     return config;
   }
 }
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAas8OAj1Z-GFpckNizRYzK7HzD3aSnOoc",
+  authDomain: "frienlychat-bfebe.firebaseapp.com",
+  projectId: "frienlychat-bfebe",
+  storageBucket: "frienlychat-bfebe.appspot.com",
+  messagingSenderId: "611441972737",
+  appId: "1:611441972737:web:89df6cfc01ceef5df45200"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
